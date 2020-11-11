@@ -35,7 +35,16 @@ XMIMEWidget::~XMIMEWidget()
 
 void XMIMEWidget::setData(QIODevice *pDevice)
 {
+    QList<QString> listTypes=XMIME::getTypes(pDevice);
 
+    ui->plainTextEditMIME->clear();
+
+    int nNumberOfTypes=listTypes.count();
+
+    for(int i=0;i<nNumberOfTypes;i++)
+    {
+        ui->plainTextEditMIME->appendPlainText(listTypes.at(i));
+    }
 }
 
 void XMIMEWidget::on_pushButtonClose_clicked()

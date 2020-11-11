@@ -26,6 +26,8 @@ DialogMIME::DialogMIME(QWidget *pParent, QIODevice *pDevice) :
     ui(new Ui::DialogMIME)
 {
     ui->setupUi(this);
+
+    ui->widgetMIME->setData(pDevice);
 }
 
 DialogMIME::~DialogMIME()
