@@ -21,8 +21,8 @@
 #include "xmimewidget.h"
 #include "ui_xmimewidget.h"
 
-XMIMEWidget::XMIMEWidget(QWidget *parent) :
-    QWidget(parent),
+XMIMEWidget::XMIMEWidget(QWidget *pParent) :
+    QWidget(pParent),
     ui(new Ui::XMIMEWidget)
 {
     ui->setupUi(this);
@@ -31,4 +31,14 @@ XMIMEWidget::XMIMEWidget(QWidget *parent) :
 XMIMEWidget::~XMIMEWidget()
 {
     delete ui;
+}
+
+void XMIMEWidget::setData(QIODevice *pDevice)
+{
+
+}
+
+void XMIMEWidget::on_pushButtonClose_clicked()
+{
+    this->close();
 }

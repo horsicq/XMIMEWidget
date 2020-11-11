@@ -21,8 +21,8 @@
 #include "dialogmime.h"
 #include "ui_dialogmime.h"
 
-DialogMIME::DialogMIME(QWidget *parent) :
-    QDialog(parent),
+DialogMIME::DialogMIME(QWidget *pParent, QIODevice *pDevice) :
+    QDialog(pParent),
     ui(new Ui::DialogMIME)
 {
     ui->setupUi(this);

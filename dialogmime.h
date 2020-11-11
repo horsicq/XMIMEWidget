@@ -32,7 +32,7 @@ class DialogMIME : public QDialog
     Q_OBJECT
 
 public:
-    explicit DialogMIME(QWidget *parent = nullptr);
+    explicit DialogMIME(QWidget *pParent,QIODevice *pDevice);
     ~DialogMIME();
 
 private:

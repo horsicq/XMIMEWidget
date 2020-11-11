@@ -13,7 +13,7 @@ SOURCES += \
     $$PWD/dialogmime.cpp \
     $$PWD/xmimewidget.cpp
 
-!contains(XCONFIG, xformats) {
-    XCONFIG += xformats
+!contains(XCONFIG, xmime) {
+    XCONFIG += xmime
     include(../XMIME/xmime.pri)
 }

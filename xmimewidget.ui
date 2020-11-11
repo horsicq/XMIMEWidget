@@ -6,13 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>431</width>
-    <height>206</height>
+    <width>789</width>
+    <height>633</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string notr="true">MIME</string>
   </property>
+  <layout class="QVBoxLayout" name="verticalLayout"/>
  </widget>
  <resources/>
  <connections/>

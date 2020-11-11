@@ -22,6 +22,7 @@
 #define XMIMEWIDGET_H
 
 #include <QWidget>
+#include "xmime.h"
 
 namespace Ui {
 class XMIMEWidget;
@@ -32,8 +33,13 @@ class XMIMEWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit XMIMEWidget(QWidget *parent = nullptr);
+    explicit XMIMEWidget(QWidget *pParent=nullptr);
     ~XMIMEWidget();
+
+    void setData(QIODevice *pDevice);
+
+private slots:
+    void on_pushButtonClose_clicked();
 
 private:
     Ui::XMIMEWidget *ui;
