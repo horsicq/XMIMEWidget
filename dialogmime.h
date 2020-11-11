@@ -18,17 +18,25 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 //
-#include "xmimewidget.h"
-#include "ui_xmimewidget.h"
+#ifndef DIALOGMIME_H
+#define DIALOGMIME_H
 
-XMIMEWidget::XMIMEWidget(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::XMIMEWidget)
-{
-    ui->setupUi(this);
+#include <QDialog>
+
+namespace Ui {
+class DialogMIME;
 }
 
-XMIMEWidget::~XMIMEWidget()
+class DialogMIME : public QDialog
 {
-    delete ui;
-}
+    Q_OBJECT
+
+public:
+    explicit DialogMIME(QWidget *parent = nullptr);
+    ~DialogMIME();
+
+private:
+    Ui::DialogMIME *ui;
+};
+
+#endif // DIALOGMIME_H
