@@ -5,3 +5,12 @@ DEPENDPATH += $$PWD
     XCONFIG += xformats
     include(../XMIME/xmime.pri)
 }
+
+FORMS += \
+    $$PWD/xmimewidget.ui
+
+HEADERS += \
+    $$PWD/xmimewidget.h
+
+SOURCES += \
+    $$PWD/xmimewidget.cpp
