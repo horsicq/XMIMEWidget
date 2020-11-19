@@ -34,3 +34,8 @@ DialogMIME::~DialogMIME()
 {
     delete ui;
 }
+
+void DialogMIME::on_pushButtonClose_clicked()
+{
+    this->close();
+}

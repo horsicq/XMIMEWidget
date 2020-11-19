@@ -35,6 +35,9 @@ public:
     explicit DialogMIME(QWidget *pParent,QIODevice *pDevice);
     ~DialogMIME();
 
+private slots:
+    void on_pushButtonClose_clicked();
+
 private:
     Ui::DialogMIME *ui;
 };
