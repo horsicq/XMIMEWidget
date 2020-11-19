@@ -39,10 +39,13 @@ public:
     void setData(QIODevice *pDevice);
 
 private slots:
-    void on_pushButtonClose_clicked();
+    void on_pushButtonClose_clicked();    
+    void on_radioButtonAll_toggled(bool bChecked);
+    void process(bool bAll);
 
 private:
     Ui::XMIMEWidget *ui;
+    QIODevice *g_pDevice;
 };
 
 #endif // XMIMEWIDGET_H

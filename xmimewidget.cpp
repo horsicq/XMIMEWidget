@@ -35,7 +35,24 @@ XMIMEWidget::~XMIMEWidget()
 
 void XMIMEWidget::setData(QIODevice *pDevice)
 {
-    QList<QString> listTypes=XMIME::getTypes(pDevice);
+    g_pDevice=pDevice;
+
+    process(ui->radioButtonAll->isChecked());
+}
+
+void XMIMEWidget::on_pushButtonClose_clicked()
+{
+    this->close();
+}
+
+void XMIMEWidget::on_radioButtonAll_toggled(bool bChecked)
+{
+    process(bChecked);
+}
+
+void XMIMEWidget::process(bool bAll)
+{
+    QList<QString> listTypes=XMIME::getTypes(g_pDevice,bAll);
 
     ui->plainTextEditMIME->clear();
 
@@ -45,9 +62,4 @@ void XMIMEWidget::setData(QIODevice *pDevice)
     {
         ui->plainTextEditMIME->appendPlainText(listTypes.at(i));
     }
-}
-
-void XMIMEWidget::on_pushButtonClose_clicked()
-{
-    this->close();
 }
