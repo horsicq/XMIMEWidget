@@ -40,7 +40,7 @@ public:
 
 private slots:
     void on_pushButtonClose_clicked();    
-    void on_radioButtonAll_toggled(bool bChecked);
+    void on_checkBoxAll_toggled(bool bChecked);
     void process(bool bAll);
 
 private:

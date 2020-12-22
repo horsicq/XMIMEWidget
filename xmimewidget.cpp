@@ -37,7 +37,7 @@ void XMIMEWidget::setData(QIODevice *pDevice)
 {
     g_pDevice=pDevice;
 
-    process(ui->radioButtonAll->isChecked());
+    process(ui->checkBoxAll->isChecked());
 }
 
 void XMIMEWidget::on_pushButtonClose_clicked()
@@ -45,7 +45,7 @@ void XMIMEWidget::on_pushButtonClose_clicked()
     this->close();
 }
 
-void XMIMEWidget::on_radioButtonAll_toggled(bool bChecked)
+void XMIMEWidget::on_checkBoxAll_toggled(bool bChecked)
 {
     process(bChecked);
 }
