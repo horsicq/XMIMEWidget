@@ -40,11 +40,6 @@ void XMIMEWidget::setData(QIODevice *pDevice)
     process(ui->checkBoxAll->isChecked());
 }
 
-void XMIMEWidget::on_pushButtonClose_clicked()
-{
-    this->close();
-}
-
 void XMIMEWidget::on_checkBoxAll_toggled(bool bChecked)
 {
     process(bChecked);

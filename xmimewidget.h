@@ -38,8 +38,7 @@ public:
 
     void setData(QIODevice *pDevice);
 
-private slots:
-    void on_pushButtonClose_clicked();    
+private slots:  
     void on_checkBoxAll_toggled(bool bChecked);
     void process(bool bAll);
 
