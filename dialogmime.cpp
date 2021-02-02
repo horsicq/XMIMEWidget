@@ -35,6 +35,11 @@ DialogMIME::~DialogMIME()
     delete ui;
 }
 
+void DialogMIME::setShortcuts(XShortcuts *pShortcuts)
+{
+    // TODO
+}
+
 void DialogMIME::on_pushButtonClose_clicked()
 {
     this->close();

@@ -22,6 +22,7 @@
 #define DIALOGMIME_H
 
 #include <QDialog>
+#include "xshortcuts.h"
 
 namespace Ui {
 class DialogMIME;
@@ -34,6 +35,7 @@ class DialogMIME : public QDialog
 public:
     explicit DialogMIME(QWidget *pParent,QIODevice *pDevice);
     ~DialogMIME();
+    void setShortcuts(XShortcuts *pShortcuts);
 
 private slots:
     void on_pushButtonClose_clicked();
