@@ -17,3 +17,8 @@ SOURCES += \
     XCONFIG += xmime
     include(../XMIME/xmime.pri)
 }
+
+!contains(XCONFIG, xshortcuts) {
+    XCONFIG += xshortcuts
+    include(../XShortcuts/xshortcuts.pri)
+}
