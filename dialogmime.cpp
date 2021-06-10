@@ -37,6 +37,7 @@ DialogMIME::~DialogMIME()
 
 void DialogMIME::setShortcuts(XShortcuts *pShortcuts)
 {
+    Q_UNUSED(pShortcuts)
     // TODO
 }
 
