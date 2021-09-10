@@ -15,10 +15,10 @@ SOURCES += \
 
 !contains(XCONFIG, xmime) {
     XCONFIG += xmime
-    include(../XMIME/xmime.pri)
+    include($$PWD/../XMIME/xmime.pri)
 }
 
 !contains(XCONFIG, xshortcuts) {
     XCONFIG += xshortcuts
-    include(../XShortcuts/xshortcuts.pri)
+    include($$PWD/../XShortcuts/xshortcuts.pri)
 }
