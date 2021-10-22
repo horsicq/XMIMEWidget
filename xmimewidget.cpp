@@ -51,9 +51,9 @@ void XMIMEWidget::process(bool bAll)
 
     ui->plainTextEditMIME->clear();
 
-    int nNumberOfTypes=listTypes.count();
+    qint32 nNumberOfTypes=listTypes.count();
 
-    for(int i=0;i<nNumberOfTypes;i++)
+    for(qint32 i=0;i<nNumberOfTypes;i++)
     {
         ui->plainTextEditMIME->appendPlainText(listTypes.at(i));
     }
