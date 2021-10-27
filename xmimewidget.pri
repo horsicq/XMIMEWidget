@@ -22,3 +22,6 @@ SOURCES += \
     XCONFIG += xshortcuts
     include($$PWD/../XShortcuts/xshortcuts.pri)
 }
+
+DISTFILES += \
+    $$PWD/xmimewidget.cmake
