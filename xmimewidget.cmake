@@ -6,8 +6,8 @@ include(${CMAKE_CURRENT_LIST_DIR}/../XShortcuts/xshortcuts.cmake)
 set(XMIMEWIDGET_SOURCES
     ${XMIME_SOURCES}
     ${XSHORTCUTS_SOURCES}
-    ${CMAKE_CURRENT_LIST_DIR}/dialogmime.ui
-    ${CMAKE_CURRENT_LIST_DIR}/xmimewidget.ui
     ${CMAKE_CURRENT_LIST_DIR}/dialogmime.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/dialogmime.ui
     ${CMAKE_CURRENT_LIST_DIR}/xmimewidget.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/xmimewidget.ui
 )
