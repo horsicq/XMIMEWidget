@@ -22,7 +22,7 @@
 #include "ui_dialogmime.h"
 
 DialogMIME::DialogMIME(QWidget *pParent, QIODevice *pDevice) :
-    QDialog(pParent),
+    XShortcutsDialog(pParent),
     ui(new Ui::DialogMIME)
 {
     ui->setupUi(this);
@@ -35,10 +35,11 @@ DialogMIME::~DialogMIME()
     delete ui;
 }
 
-void DialogMIME::setShortcuts(XShortcuts *pShortcuts)
+void DialogMIME::setGlobal(XShortcuts *pShortcuts,XOptions *pXOptions)
 {
-    Q_UNUSED(pShortcuts)
     // TODO
+
+    XShortcutsDialog::setGlobal(pShortcuts,pXOptions);
 }
 
 void DialogMIME::on_pushButtonClose_clicked()
