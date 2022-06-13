@@ -21,7 +21,7 @@
 #include "dialogmime.h"
 #include "ui_dialogmime.h"
 
-DialogMIME::DialogMIME(QWidget *pParent, QIODevice *pDevice) :
+DialogMIME::DialogMIME(QWidget *pParent,QIODevice *pDevice) :
     XShortcutsDialog(pParent),
     ui(new Ui::DialogMIME)
 {
