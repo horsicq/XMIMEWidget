@@ -24,4 +24,6 @@ SOURCES += \
 }
 
 DISTFILES += \
+    $$PWD/LICENSE \
+    $$PWD/README.md \
     $$PWD/xmimewidget.cmake
