@@ -1,10 +1,6 @@
 INCLUDEPATH += $$PWD
 DEPENDPATH += $$PWD
 
-FORMS += \
-    $$PWD/dialogmime.ui \
-    $$PWD/xmimewidget.ui
-
 HEADERS += \
     $$PWD/dialogmime.h \
     $$PWD/xmimewidget.h
@@ -12,6 +8,10 @@ HEADERS += \
 SOURCES += \
     $$PWD/dialogmime.cpp \
     $$PWD/xmimewidget.cpp
+
+FORMS += \
+    $$PWD/dialogmime.ui \
+    $$PWD/xmimewidget.ui
 
 !contains(XCONFIG, xmime) {
     XCONFIG += xmime
