@@ -19,30 +19,25 @@
  * SOFTWARE.
  */
 #include "dialogmime.h"
+
 #include "ui_dialogmime.h"
 
-DialogMIME::DialogMIME(QWidget *pParent,QIODevice *pDevice) :
-    XShortcutsDialog(pParent),
-    ui(new Ui::DialogMIME)
-{
+DialogMIME::DialogMIME(QWidget *pParent, QIODevice *pDevice) : XShortcutsDialog(pParent), ui(new Ui::DialogMIME) {
     ui->setupUi(this);
 
     ui->widgetMIME->setData(pDevice);
 }
 
-DialogMIME::~DialogMIME()
-{
+DialogMIME::~DialogMIME() {
     delete ui;
 }
 
-void DialogMIME::setGlobal(XShortcuts *pShortcuts,XOptions *pXOptions)
-{
+void DialogMIME::setGlobal(XShortcuts *pShortcuts, XOptions *pXOptions) {
     // TODO
 
-    XShortcutsDialog::setGlobal(pShortcuts,pXOptions);
+    XShortcutsDialog::setGlobal(pShortcuts, pXOptions);
 }
 
-void DialogMIME::on_pushButtonClose_clicked()
-{
+void DialogMIME::on_pushButtonClose_clicked() {
     this->close();
 }

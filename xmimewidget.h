@@ -22,23 +22,23 @@
 #define XMIMEWIDGET_H
 
 #include <QWidget>
+
 #include "xmime.h"
 
 namespace Ui {
 class XMIMEWidget;
 }
 
-class XMIMEWidget : public QWidget
-{
+class XMIMEWidget : public QWidget {
     Q_OBJECT
 
 public:
-    explicit XMIMEWidget(QWidget *pParent=nullptr);
+    explicit XMIMEWidget(QWidget *pParent = nullptr);
     ~XMIMEWidget();
 
     void setData(QIODevice *pDevice);
 
-private slots:  
+private slots:
     void on_checkBoxAll_toggled(bool bChecked);
     void process(bool bAll);
 
@@ -47,4 +47,4 @@ private:
     QIODevice *g_pDevice;
 };
 
-#endif // XMIMEWIDGET_H
+#endif  // XMIMEWIDGET_H
