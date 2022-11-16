@@ -22,25 +22,30 @@
 
 #include "ui_xmimewidget.h"
 
-XMIMEWidget::XMIMEWidget(QWidget *pParent) : QWidget(pParent), ui(new Ui::XMIMEWidget) {
+XMIMEWidget::XMIMEWidget(QWidget *pParent) : QWidget(pParent), ui(new Ui::XMIMEWidget)
+{
     ui->setupUi(this);
 }
 
-XMIMEWidget::~XMIMEWidget() {
+XMIMEWidget::~XMIMEWidget()
+{
     delete ui;
 }
 
-void XMIMEWidget::setData(QIODevice *pDevice) {
+void XMIMEWidget::setData(QIODevice *pDevice)
+{
     g_pDevice = pDevice;
 
     process(ui->checkBoxAll->isChecked());
 }
 
-void XMIMEWidget::on_checkBoxAll_toggled(bool bChecked) {
+void XMIMEWidget::on_checkBoxAll_toggled(bool bChecked)
+{
     process(bChecked);
 }
 
-void XMIMEWidget::process(bool bAll) {
+void XMIMEWidget::process(bool bAll)
+{
     QList<QString> listTypes = XMIME::getTypes(g_pDevice, bAll);
 
     ui->plainTextEditMIME->clear();
