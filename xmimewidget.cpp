@@ -22,8 +22,7 @@
 
 #include "ui_xmimewidget.h"
 
-XMIMEWidget::XMIMEWidget(QWidget *pParent)
-    : QWidget(pParent), ui(new Ui::XMIMEWidget)
+XMIMEWidget::XMIMEWidget(QWidget *pParent) : QWidget(pParent), ui(new Ui::XMIMEWidget)
 {
     ui->setupUi(this);
 }
