@@ -22,7 +22,7 @@
 
 #include "ui_xmimewidget.h"
 
-XMIMEWidget::XMIMEWidget(QWidget *pParent) : QWidget(pParent), ui(new Ui::XMIMEWidget)
+XMIMEWidget::XMIMEWidget(QWidget *pParent) : XShortcutsWidget(pParent), ui(new Ui::XMIMEWidget)
 {
     ui->setupUi(this);
 }
@@ -30,6 +30,11 @@ XMIMEWidget::XMIMEWidget(QWidget *pParent) : QWidget(pParent), ui(new Ui::XMIMEW
 XMIMEWidget::~XMIMEWidget()
 {
     delete ui;
+}
+
+void XMIMEWidget::adjustView()
+{
+    // TODO
 }
 
 void XMIMEWidget::setData(QIODevice *pDevice)
@@ -55,4 +60,9 @@ void XMIMEWidget::process(bool bAll)
     for (qint32 i = 0; i < nNumberOfTypes; i++) {
         ui->plainTextEditMIME->appendPlainText(listTypes.at(i));
     }
+}
+
+void XMIMEWidget::registerShortcuts(bool bState)
+{
+    Q_UNUSED(bState)
 }

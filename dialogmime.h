@@ -37,8 +37,13 @@ public:
     ~DialogMIME();
     void setGlobal(XShortcuts *pShortcuts, XOptions *pXOptions);
 
+    virtual void adjustView() {}
+
 private slots:
     void on_pushButtonClose_clicked();
+
+protected:
+    virtual void registerShortcuts(bool bState) { Q_UNUSED(bState) }
 
 private:
     Ui::DialogMIME *ui;

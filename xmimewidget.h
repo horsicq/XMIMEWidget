@@ -21,26 +21,29 @@
 #ifndef XMIMEWIDGET_H
 #define XMIMEWIDGET_H
 
-#include <QWidget>
-
+#include "xshortcutswidget.h"
 #include "xmime.h"
 
 namespace Ui {
 class XMIMEWidget;
 }
 
-class XMIMEWidget : public QWidget {
+class XMIMEWidget : public XShortcutsWidget {
     Q_OBJECT
 
 public:
     explicit XMIMEWidget(QWidget *pParent = nullptr);
     ~XMIMEWidget();
 
+    virtual void adjustView();
     void setData(QIODevice *pDevice);
 
 private slots:
     void on_checkBoxAll_toggled(bool bChecked);
     void process(bool bAll);
+
+protected:
+    virtual void registerShortcuts(bool bState);
 
 private:
     Ui::XMIMEWidget *ui;
