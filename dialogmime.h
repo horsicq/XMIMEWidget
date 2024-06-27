@@ -21,8 +21,6 @@
 #ifndef DIALOGMIME_H
 #define DIALOGMIME_H
 
-#include <QDialog>
-
 #include "xshortcutsdialog.h"
 
 namespace Ui {
