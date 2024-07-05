@@ -22,7 +22,7 @@
 
 #include "ui_dialogmime.h"
 
-DialogMIME::DialogMIME(QWidget *pParent, QIODevice *pDevice) : XShortcutsDialog(pParent), ui(new Ui::DialogMIME)
+DialogMIME::DialogMIME(QWidget *pParent, QIODevice *pDevice) : XShortcutsDialog(pParent, false), ui(new Ui::DialogMIME)
 {
     ui->setupUi(this);
 
