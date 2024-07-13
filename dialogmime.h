@@ -35,9 +35,7 @@ public:
     ~DialogMIME();
     void setGlobal(XShortcuts *pShortcuts, XOptions *pXOptions);
 
-    virtual void adjustView()
-    {
-    }
+    virtual void adjustView();
 
 private slots:
     void on_pushButtonClose_clicked();
