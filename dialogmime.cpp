@@ -43,7 +43,6 @@ void DialogMIME::setGlobal(XShortcuts *pShortcuts, XOptions *pXOptions)
 
 void DialogMIME::adjustView()
 {
-
 }
 
 void DialogMIME::on_pushButtonClose_clicked()
