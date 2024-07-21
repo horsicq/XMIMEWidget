@@ -49,3 +49,9 @@ void DialogMIME::on_pushButtonClose_clicked()
 {
     this->close();
 }
+
+void DialogMIME::registerShortcuts(bool bState)
+{
+    Q_UNUSED(bState)
+    // TODO
+}
