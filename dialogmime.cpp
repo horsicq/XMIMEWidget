@@ -36,7 +36,7 @@ DialogMIME::~DialogMIME()
 
 void DialogMIME::setGlobal(XShortcuts *pShortcuts, XOptions *pXOptions)
 {
-    // TODO
+    ui->widgetMIME->setGlobal(pShortcuts, pXOptions);
 
     XShortcutsDialog::setGlobal(pShortcuts, pXOptions);
 }
