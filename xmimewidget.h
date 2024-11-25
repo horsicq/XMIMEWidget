@@ -37,6 +37,7 @@ public:
 
     virtual void adjustView();
     void setData(QIODevice *pDevice);
+    virtual void reloadData(bool bSaveSelection);
 
 private slots:
     void on_checkBoxAll_toggled(bool bChecked);
