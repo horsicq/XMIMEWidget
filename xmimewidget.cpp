@@ -39,7 +39,7 @@ void XMIMEWidget::adjustView()
 
 void XMIMEWidget::setData(QIODevice *pDevice)
 {
-    g_pDevice = pDevice;
+    m_pDevice = pDevice;
 
     process(ui->checkBoxAll->isChecked());
 }
@@ -57,7 +57,7 @@ void XMIMEWidget::on_checkBoxAll_toggled(bool bChecked)
 
 void XMIMEWidget::process(bool bAll)
 {
-    QList<QString> listTypes = XMIME::getTypes(g_pDevice, bAll);
+    QList<QString> listTypes = XMIME::getTypes(m_pDevice, bAll);
 
     ui->plainTextEditMIME->clear();
 

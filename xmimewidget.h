@@ -48,7 +48,7 @@ protected:
 
 private:
     Ui::XMIMEWidget *ui;
-    QIODevice *g_pDevice;
+    QIODevice *m_pDevice;
 };
 
 #endif  // XMIMEWIDGET_H
