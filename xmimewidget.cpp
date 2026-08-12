@@ -24,6 +24,8 @@
 
 XMIMEWidget::XMIMEWidget(QWidget *pParent) : XShortcutsWidget(pParent), ui(new Ui::XMIMEWidget)
 {
+    m_pDevice = nullptr;
+
     ui->setupUi(this);
 }
 
