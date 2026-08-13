@@ -26,6 +26,8 @@ DialogMIME::DialogMIME(QWidget *pParent, QIODevice *pDevice) : XShortcutsDialog(
 {
     ui->setupUi(this);
 
+    connect(ui->buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
+
     ui->widgetMIME->setData(pDevice);
 }
 
@@ -43,11 +45,7 @@ void DialogMIME::setGlobal(XShortcuts *pShortcuts, XOptions *pXOptions)
 
 void DialogMIME::adjustView()
 {
-}
-
-void DialogMIME::on_pushButtonClose_clicked()
-{
-    this->close();
+    ui->widgetMIME->adjustView();
 }
 
 void DialogMIME::registerShortcuts(bool bState)

@@ -32,16 +32,13 @@ class DialogMIME : public XShortcutsDialog {
 
 public:
     explicit DialogMIME(QWidget *pParent, QIODevice *pDevice);
-    ~DialogMIME();
-    void setGlobal(XShortcuts *pShortcuts, XOptions *pXOptions);
+    ~DialogMIME() override;
+    void setGlobal(XShortcuts *pShortcuts, XOptions *pXOptions) override;
 
-    virtual void adjustView();
-
-private slots:
-    void on_pushButtonClose_clicked();
+    void adjustView() override;
 
 protected:
-    virtual void registerShortcuts(bool bState);
+    void registerShortcuts(bool bState) override;
 
 private:
     Ui::DialogMIME *ui;

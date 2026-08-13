@@ -21,6 +21,9 @@
 #ifndef XMIMEWIDGET_H
 #define XMIMEWIDGET_H
 
+#include <QPointer>
+#include <QStringList>
+
 #include "xshortcutswidget.h"
 #include "xmime.h"
 
@@ -33,22 +36,32 @@ class XMIMEWidget : public XShortcutsWidget {
 
 public:
     explicit XMIMEWidget(QWidget *pParent = nullptr);
-    ~XMIMEWidget();
+    ~XMIMEWidget() override;
 
-    virtual void adjustView();
+    void adjustView() override;
     void setData(QIODevice *pDevice);
-    virtual void reloadData(bool bSaveSelection);
+    void reloadData(bool bSaveSelection) override;
 
 private slots:
     void on_checkBoxAll_toggled(bool bChecked);
-    void process(bool bAll);
+    void onDeviceDestroyed();
 
 protected:
-    virtual void registerShortcuts(bool bState);
+    void registerShortcuts(bool bState) override;
+
+private:
+    bool detectTypes();
+    bool isDeviceReady() const;
+    void invalidateData(const QString &sStatus);
+    void process(bool bAll);
+    void setDataControlsEnabled(bool bState);
+    void setStatus(const QString &sStatus);
 
 private:
     Ui::XMIMEWidget *ui;
-    QIODevice *m_pDevice;
+    QPointer<QIODevice> m_pDevice;
+    QMetaObject::Connection m_deviceDestroyedConnection;
+    QStringList m_listTypes;
 };
 
 #endif  // XMIMEWIDGET_H
